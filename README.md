@@ -3,9 +3,9 @@
 Este repositorio contiene una serie de instrucciones para abordar la programacion de robots con ROS y coppealiasim usando python.
 
 # Contenido
-* [1. Introduccion](#1-Introducción)
-* [2. Update History](#2-update-summary)
-* [3. Preparations (**MUST DO**)](#3-preparations-before-using-this-package)
+* [1. Introducción](#1-Introducción)
+* [2. Uso Básico de Git ](#2-Uso-Básico-de-Git)
+* [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
 * [4. Get Started](#4-getting-started-with-xarm_ros)
 * [5. Package Description & Usage Guidance](#5-package-description--usage-guidance)
     * [5.1 xarm_description](#51-xarm_description)  
@@ -25,3 +25,6 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
     * [8.0 An example of demonstrating redundancy resolution using MoveIt](https://github.com/xArm-
 
 # 1. Introducción
+ROS (Robot Operation System)
+# 2. Uso Básico de Git
+# 3. Paquetes y Nodos
