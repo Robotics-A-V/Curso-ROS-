@@ -3,7 +3,7 @@
 Este repositorio contiene una serie de instrucciones para abordar la programacion de robots con ROS y coppealiasim usando python.
 
 # Contenido
-* [1. Introduccion](#1-introduction)
+* [1. Introduccion](#1-Introducción)
 * [2. Update History](#2-update-summary)
 * [3. Preparations (**MUST DO**)](#3-preparations-before-using-this-package)
 * [4. Get Started](#4-getting-started-with-xarm_ros)
