@@ -93,6 +93,7 @@ roscore
 ```
 ![xArmFrames](./Doc/0_comprobacion_instalacion.png)   
 # 1. Introducción
+Conceptos generales sobre el uso de ROS
 
 
 # 2. Uso Básico de Git
