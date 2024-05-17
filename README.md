@@ -82,7 +82,7 @@ Comprobación:
 ```
 roscore 
 ```
-![xArmFrames](./doc/)   
+![xArmFrames](./doc/0_comprobacion_instalacion.png)   
 # 1. Introducción
 # 2. Uso Básico de Git
 # 3. Paquetes y Nodos
