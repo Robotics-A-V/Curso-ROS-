@@ -43,4 +43,4 @@ roscore
 ```
 ![xArmFrames](0_comprobacion_instalacion.png)   
 
-[ir a Introducción](https://github.com/Robotics-A-V/Curso-ROS-/tree/main/#9.-Coppeliasim))
+[ir a Introducción](https://github.com/Robotics-A-V/Curso-ROS-/tree/main/#9-Coppeliasim))
