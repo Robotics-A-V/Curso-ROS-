@@ -27,9 +27,11 @@ Para el funcionamiento de ROS es necesario instalar Ubuntu, para el actual repos
 
 Imagen ISO (ubuntu-20.04.6-desktop-amd64.iso): [Descarga](https://releases.ubuntu.com/focal/)
 
-Opción Máquina Virtual: [Guía](https://drive.google.com/file/d/16WalqxyXt-MuOT5KX8L0hKnSa88WGsNh/view?usp=share_link)
+Opción Máquina Virtual: [guia by Sarah Meyer­Waldo](https://drive.google.com/file/d/16WalqxyXt-MuOT5KX8L0hKnSa88WGsNh/view?usp=share_link)
 
 Opcion Partición del disco (Cambiar por la Iso 20.04): [Tutorial](https://www.youtube.com/watch?v=_d6oT7rEoGc)
+
+Instalacion de ROS
 
 # 1. Introducción
 # 2. Uso Básico de Git
