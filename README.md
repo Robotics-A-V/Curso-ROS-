@@ -33,6 +33,13 @@ Opción Máquina Virtual: [guia by Sarah Meyer­Waldo](https://drive.google.com
 
 Opcion Partición del disco (Cambiar por la Iso 20.04): [Tutorial](https://www.youtube.com/watch?v=_d6oT7rEoGc)
 
+Verificación de instalación de Python
+
+Abro una terminal y escribo:
+```
+python3 --version
+```
+
 # 0.2 Instalación de ROS
 
 Enlace Oficial ROS Noetic: [link](https://wiki.ros.org/noetic/Installation/Ubuntu)
