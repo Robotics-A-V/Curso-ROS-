@@ -43,4 +43,4 @@ roscore
 ```
 ![xArmFrames](0_comprobacion_instalacion.png)   
 
-[ir a Introducción](./#1-Introducción)
+[ir a Introducción](./README.md/#1-Introducción)
