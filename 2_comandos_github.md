@@ -1,3 +1,11 @@
+**1. Configuración Inicial**
+
+Configurar tu identidad
+```
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@example.com"
+```
+Comandos Básicos de Git
 Inicializar un repositorio
 ```
 git init
