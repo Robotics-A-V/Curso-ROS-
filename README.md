@@ -7,7 +7,7 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
     * [0.1 Instalación de Ubuntu](#0.1-Instalación-de-Ubuntu)
     * [0.2 Instalación de ROS](#0.2-Instalación-de-ROS)
 * [1. Introducción](#1-Introducción)
-* [2. Uso Básico de Git ](#2-Uso-Básico-de-Git)
+* [2. GitHub y ROS  ](#2-GitHub-y-ROS )
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
 * [4. Intercambio de mensajes en ROS](#4-Intercambio-de-mensajes-en-ROS)
     * [4.1 Estructura de mensajes] 
@@ -93,10 +93,39 @@ roscore
 ```
 ![xArmFrames](./Doc/0_comprobacion_instalacion.png)   
 # 1. Introducción
-Conceptos generales sobre el uso de ROS
+Conceptos generales sobre el uso de ROS [Resumen](./Doc/1_ROS.pdf)
 
+[Wiki-ROS-Conceptos](https://wiki.ros.org/es/ROS/Conceptos)
 
-# 2. Uso Básico de Git
+[Wiki-ROS-Tutoriales](https://wiki.ros.org/ROS/Tutorials)
+# 2. GitHub y ROS 
+
+GitHub y ROS (Robot Operating System) están estrechamente relacionados en el desarrollo de software robótico:
+
+1. **Alojamiento del Código**
+
+Los desarrolladores de ROS usan GitHub para almacenar y gestionar el código fuente de sus paquetes de ROS en repositorios públicos o privados.
+
+2. **Gestión de Dependencias** 
+
+GitHub permite organizar proyectos de ROS en múltiples repositorios y submódulos, facilitando la gestión de dependencias entre paquetes.
+
+3. **Colaboración**
+
+GitHub proporciona herramientas como pull requests e issues, esenciales para la colaboración en proyectos de ROS, permitiendo a los desarrolladores contribuir y mejorar el software colectivamente.
+
+4. **Versionado y Lanzamientos**
+
+Los proyectos de ROS utilizan GitHub para etiquetar versiones y crear lanzamientos, asegurando que los usuarios puedan acceder a versiones específicas y estables del software.
+
+5. **Integración Continua**
+
+Con servicios de CI como GitHub Actions, los desarrolladores de ROS pueden automatizar pruebas y compilaciones, garantizando la calidad del código antes de su integración.
+
+6. **Documentación**
+
+GitHub facilita la publicación de documentación y guías de uso directamente en los repositorios, complementando la wiki oficial de ROS.
+
 # 3. Paquetes y Nodos
 # 4. Intercambio de mensajes en ROS
 # 5. Servicios y Acciones
