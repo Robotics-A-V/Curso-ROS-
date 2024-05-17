@@ -27,7 +27,10 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
 # 6. Comunicación con dispositivos
 # 7. Robot 3 GDL
 # 8. Rviz MoveiT
+Instalar las dependencias
    gazebo_ros_pkgs: <http://gazebosim.org/tutorials?tut=ros_installing> 
+   
    ros_control: <http://wiki.ros.org/ros_control> 
+   
    moveit_core: <https://moveit.ros.org/install/>  
 # 9. Coppeliasim
