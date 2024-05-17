@@ -41,4 +41,6 @@ Comprobación:
 ```
 roscore 
 ```
-![xArmFrames](./Doc/0_comprobacion_instalacion.png)   
+![xArmFrames](0_comprobacion_instalacion.png)   
+
+[ir a Introducción]
