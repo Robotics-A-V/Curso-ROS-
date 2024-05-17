@@ -48,7 +48,7 @@ Instalación de ROS Noetic en Ubuntu 20.04
 
 A continuación, ejecutar todos los comandos en el terminal:
 
-[Instalacion ROS](0_Instalacion.md)
+[***1-Instalacion ROS***](0_Instalacion.md)
 # 1. Introducción
 Conceptos generales sobre el uso de ROS [Resumen](./Doc/1_ROS.pdf)
 
@@ -85,7 +85,7 @@ GitHub facilita la publicación de documentación y guías de uso directamente e
 
 [Tutorial recomendado](https://www.youtube.com/watch?v=mBYSUUnMt9M&t=14612s)
 
-[***Comandos Básicos***](2_comandos_github.md)
+[***2-Comandos Básicos***](2_comandos_github.md)
 
 # 3. Paquetes y Nodos
 # 4. Intercambio de mensajes en ROS
