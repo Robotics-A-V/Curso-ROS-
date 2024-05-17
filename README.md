@@ -4,8 +4,8 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
 
 # Contenido
 * [0. Prerrequisitos ](#0.-Prerrequisitos )
-    * [0.1 Instalacion de Ubuntu](#0.1-Instalación-de-Ubuntu)
-    * [0.2 Instalacion de ROS](#0.2-Instalacion-de-ROS)
+    * [0.1 Instalación de Ubuntu](#0.1-Instalación-de-Ubuntu)
+    * [0.2 Instalación de ROS](#0.2-Instalación-de-ROS)
 * [1. Introducción](#1-Introducción)
 * [2. Uso Básico de Git ](#2-Uso-Básico-de-Git)
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
@@ -33,7 +33,7 @@ Opción Máquina Virtual: [guia by Sarah Meyer­Waldo](https://drive.google.com
 
 Opcion Partición del disco (Cambiar por la Iso 20.04): [Tutorial](https://www.youtube.com/watch?v=_d6oT7rEoGc)
 
-# 0.2 Instalacion de ROS
+# 0.2 Instalación de ROS
 
 Enlace Oficial ROS Noetic: [link](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
@@ -86,6 +86,8 @@ roscore
 ```
 ![xArmFrames](./Doc/0_comprobacion_instalacion.png)   
 # 1. Introducción
+
+
 # 2. Uso Básico de Git
 # 3. Paquetes y Nodos
 # 4. Intercambio de mensajes en ROS
