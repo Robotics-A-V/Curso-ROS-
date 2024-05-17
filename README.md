@@ -128,15 +128,7 @@ GitHub facilita la publicación de documentación y guías de uso directamente e
 
 [Tutorial recomendado](https://www.youtube.com/watch?v=mBYSUUnMt9M&t=14612s)
 
-***Comandos Básicos***
-**1. Configuración Inicial**
-
-Configurar tu identidad
-```
-git config --global user.name "Tu Nombre"
-git config --global user.email "tuemail@example.com"
-```
-Comandos Básicos de Git
+[***Comandos Básicos***](2_comandos_github.md)
 
 # 3. Paquetes y Nodos
 # 4. Intercambio de mensajes en ROS
