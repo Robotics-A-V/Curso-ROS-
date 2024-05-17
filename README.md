@@ -100,3 +100,5 @@ Instalar las dependencias
    
    moveit_core: <https://moveit.ros.org/install/>  
 # 9. Coppeliasim
+
+EL simulador Coppeliasim contiene una serie de 
