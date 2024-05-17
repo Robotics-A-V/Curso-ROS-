@@ -3,24 +3,24 @@
 Este repositorio contiene una serie de instrucciones para abordar la programacion de robots con ROS y coppealiasim usando python.
 
 # Contenido
-* [0. Prerrequisitos ](#0.-Prerrequisitos )
-    * [0.1 Instalación de Ubuntu](#0.1-Instalación-de-Ubuntu)
-    * [0.2 Instalación de ROS](#0.2-Instalación-de-ROS)
+* [0. Prerrequisitos ](#0-Prerrequisitos )
+    * [0.1 Instalación de Ubuntu](#01-Instalación-de-Ubuntu)
+    * [0.2 Instalación de ROS](#02-Instalación-de-ROS)
 * [1. Introducción](#1-Introducción)
 * [2. GitHub y ROS  ](#2-GitHub-y-ROS )
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
 * [4. Intercambio de mensajes en ROS](#4-Intercambio-de-mensajes-en-ROS)
     * [4.1 Estructura de mensajes] 
     * [4.2 Mensajes Propios]
-* [5. Servicios y Acciones](#5.-Servicios-y-Acciones)
+* [5. Servicios y Acciones](#5-Servicios-y-Acciones)
     * [5.1 Servicios]
     * [5.2 Acciones]
-* [6. Comunicación con dispositivos](#6.-Comunicación-con-dispositivos)
+* [6. Comunicación con dispositivos](#6-Comunicación-con-dispositivos)
     * [6.1 Serial - Arduino ID]
     * [6.2 Mqtt - ESP32]
-* [7. Robot 3 GDL](#7.-Robot-3-GDL)
-* [8. Rviz MoveiT](#8.-Rviz-Movei)
-* [9. Coppeliasim](#9.-Coppeliasim)
+* [7. Robot 3 GDL](#7-Robot-3-GDL)
+* [8. Rviz MoveiT](#8-Rviz-Movei)
+* [9. Coppeliasim](#9-Coppeliasim)
   
 # 0. Prerrequisitos
 # 0.1 Instalación de Ubuntu
