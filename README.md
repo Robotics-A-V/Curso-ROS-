@@ -35,7 +35,7 @@ Opcion Partición del disco (Cambiar por la Iso 20.04): [Tutorial](https://www.y
 
 Verificación de instalación de Python
 
-Abro una terminal y escribo:
+Ejecuto en la terminal
 ```
 python3 --version
 ```
