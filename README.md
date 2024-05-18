@@ -85,7 +85,7 @@ GitHub facilita la publicación de documentación y guías de uso directamente e
 
 [Tutorial recomendado](https://www.youtube.com/watch?v=mBYSUUnMt9M&t=14612s)
 
-[***2-Comandos Básicos***](./Clases/2_comandos_github.md)
+[***2-Comandos Básicos***](./Doc/2_comandos_github.md)
 
 # 3. Paquetes y Nodos
 1. Paquetes en ROS
@@ -124,7 +124,7 @@ Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un siste
 * Servicios: Permiten la comunicación de solicitud-respuesta entre nodos. Un nodo puede ofrecer un servicio y otro nodo puede llamarlo para realizar una operación específica.
 * Acciones: Son similares a los servicios, pero están diseñados para operaciones que pueden tardar un tiempo indeterminado y requieren feedback durante su ejecución.
 
-[3- Ejemplo](./Doc/1-Introduccion-Paquetes)
+[3- Ejemplo](./Ejemplos/1-Introduccion-Paquetes)
 # 4. Intercambio de mensajes en ROS
 # 5. Servicios y Acciones
 # 6. Comunicación con dispositivos
