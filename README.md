@@ -85,7 +85,7 @@ GitHub facilita la publicación de documentación y guías de uso directamente e
 
 [Tutorial recomendado](https://www.youtube.com/watch?v=mBYSUUnMt9M&t=14612s)
 
-[***2-Comandos Básicos***](./Doc/2_comandos_github.md)
+[***2-Comandos Básicos***](./Clases/2_comandos_github.md)
 
 # 3. Paquetes y Nodos
 1. Paquetes en ROS
