@@ -95,7 +95,7 @@ Un paquete en ROS es la unidad básica de organización del software. Un paquete
 **Estructura de un Paquete:**
 
 * CMakeLists.txt: Archivo de configuración de CMake que describe cómo compilar el paquete.
-package.xml: Archivo de metadatos que contiene información sobre el paquete, como el nombre, la versión, las dependencias y el mantenedor.
+* package.xml: Archivo de metadatos que contiene información sobre el paquete, como el nombre, la versión, las dependencias y el mantenedor.
 * src/: Directorio que contiene el código fuente del paquete.
 * include/: Directorio que contiene archivos de encabezado (headers) para bibliotecas.
 * launch/: Directorio que contiene archivos de lanzamiento (launch files) utilizados para iniciar nodos y configurar el sistema.
