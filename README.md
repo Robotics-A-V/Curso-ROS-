@@ -88,6 +88,43 @@ GitHub facilita la publicación de documentación y guías de uso directamente e
 [***2-Comandos Básicos***](./Doc/2_comandos_github.md)
 
 # 3. Paquetes y Nodos
+1. Paquetes en ROS
+
+Un paquete en ROS es la unidad básica de organización del software. Un paquete puede contener nodos, bibliotecas, archivos de configuración, archivos de lanzamiento, mensajes, servicios y otros recursos necesarios para el desarrollo y ejecución de un sistema robótico.
+
+**Estructura de un Paquete:**
+
+* CMakeLists.txt: Archivo de configuración de CMake que describe cómo compilar el paquete.
+package.xml: Archivo de metadatos que contiene información sobre el paquete, como el nombre, la versión, las dependencias y el mantenedor.
+* src/: Directorio que contiene el código fuente del paquete.
+* include/: Directorio que contiene archivos de encabezado (headers) para bibliotecas.
+* launch/: Directorio que contiene archivos de lanzamiento (launch files) utilizados para iniciar nodos y configurar el sistema.
+* msg/: Directorio para definir mensajes personalizados que los nodos pueden intercambiar.
+* srv/: Directorio para definir servicios personalizados.
+  
+**Funciones de un Paquete:**
+
+* Modularidad: Permite dividir el sistema en módulos manejables y reutilizables.
+* Gestión de Dependencias: Facilita la gestión de dependencias, asegurando que todas las bibliotecas y herramientas necesarias estén disponibles.
+* Distribución: Facilita la distribución y la colaboración, ya que los paquetes pueden ser compartidos y reutilizados por otros desarrolladores.
+
+2. Nodos en ROS
+
+Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un sistema robótico complejo, múltiples nodos se ejecutan simultáneamente, cada uno realizando tareas específicas y comunicándose entre sí.
+
+**Características de los Nodos**
+
+* Independencia: Cada nodo es un proceso independiente que puede ejecutarse en la misma máquina o en diferentes máquinas dentro de una red.
+* Comunicación: Los nodos se comunican entre sí utilizando mensajes, temas (topics), servicios y acciones.
+* Modularidad: Facilita la modularización del software, permitiendo que diferentes funcionalidades sean desarrolladas y mantenidas de manera independiente.
+
+**Comunicación entre Nodos**
+
+* Mensajes y Temas: Los nodos pueden publicar y suscribirse a temas para intercambiar mensajes. Por ejemplo, un nodo de cámara puede publicar imágenes en un tema, mientras que un nodo de procesamiento de imágenes se suscribe a ese tema para recibir y procesar las imágenes.
+* Servicios: Permiten la comunicación de solicitud-respuesta entre nodos. Un nodo puede ofrecer un servicio y otro nodo puede llamarlo para realizar una operación específica.
+* Acciones: Son similares a los servicios, pero están diseñados para operaciones que pueden tardar un tiempo indeterminado y requieren feedback durante su ejecución.
+
+[3- Ejemplo](./Doc/1-Introduccion-Paquetes)
 # 4. Intercambio de mensajes en ROS
 # 5. Servicios y Acciones
 # 6. Comunicación con dispositivos
