@@ -20,6 +20,9 @@ Cargo la imagen ISO
 ![Seleccion](./0-VB3.jpeg)
 
 
+Congifuro la memoria ram y el número de nucleos
+
+
 ![Seleccion](./0-VB4.jpeg)
 
 Agrego un Usuario y contraseña para la máquina virtual
