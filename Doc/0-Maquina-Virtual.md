@@ -19,19 +19,26 @@ Cargo la imagen ISO
 
 ![Seleccion](./0-VB3.jpeg)
 
-
-Congifuro la memoria ram y el número de nucleos
-
-
 ![Seleccion](./0-VB4.jpeg)
 
 Agrego un Usuario y contraseña para la máquina virtual
 
-
 ![Seleccion](./0-VB5.jpeg)
 
+Congifuro la memoria ram y el número de nucleos (se recomienda utilizar el 50% de la memoria RAM Física)
+
+![Seleccion](./0-VB6.jpeg)
+
+Para un uso básico se recomienda un total de 30 GB de memoria
+
+![Seleccion](./0-VB7.jpeg)
+
+Finalizo la configuración 
+
+![Seleccion](./0-VB8.jpeg)
 
 ***Posibles Errores*** -
+
 1. Al momento de ejecutar la máquina virtual
 NOT IN A HYPERVISOR PARTITION (HVP =0 ) [solucion](https://www.youtube.com/watch?v=XkLHhqOZmmY&t=5s)
 
