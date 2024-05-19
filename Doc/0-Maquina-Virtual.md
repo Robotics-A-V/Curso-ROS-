@@ -39,7 +39,7 @@ Finalizo la configuración
 
 Arrancar Máquina virtual - Al iniciar la máquina de forma automática comenzará la instalación
 
-
+![Seleccion](./0-VB9.jpeg)
 ***Posibles Errores*** -
 
 1. Al momento de ejecutar la máquina virtual
