@@ -2,7 +2,9 @@
 
 1.  [Descargar VirtualBox] (https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html)
 
-![Seleccion](./Doc/0-VB0.jpeg)
+![Seleccion](./0-VB0.jpeg)
+
+![xArmFrames](0_comprobacion_instalacion.png)
 
 3. Configuracion de VirtualBOX
 
