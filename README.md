@@ -10,14 +10,14 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
 * [2. GitHub y ROS  ](#2-GitHub-y-ROS )
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
 * [4. Intercambio de mensajes en ROS](#4-Intercambio-de-mensajes-en-ROS)
-    * [4.1 Estructura de mensajes] 
-    * [4.2 Mensajes Propios]
+    * 4.1 Estructura de mensajes 
+    * 4.2 Mensajes Propios
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
-    * [5.1 Servicios]
-    * [5.2 Acciones]
+    * 5.1 Servicios
+    * 5.2 Acciones
 * [6. Comunicación con dispositivos](#6-Comunicación-con-dispositivos)
-    * [6.1 Serial - Arduino ID]
-    * [6.2 Mqtt - ESP32]
+    * 6.1 Serial - Arduino ID
+    * 6.2 Mqtt - ESP32
 * [7. Robot 3 GDL](#7-Robot-3-GDL)
 * [8. Rviz MoveiT](#8-Rviz-Movei)
 * [9. Coppeliasim](#9-Coppeliasim)
