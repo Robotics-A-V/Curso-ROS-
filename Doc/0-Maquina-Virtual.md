@@ -37,6 +37,9 @@ Finalizo la configuración
 
 ![Seleccion](./0-VB8.jpeg)
 
+Arrancar Máquina virtual - Al iniciar la máquina de forma automática comenzará la instalación
+
+
 ***Posibles Errores*** -
 
 1. Al momento de ejecutar la máquina virtual
