@@ -29,7 +29,7 @@ Para el funcionamiento de ROS es necesario instalar Ubuntu, para el actual repos
 
 Imagen ISO (ubuntu-20.04.6-desktop-amd64.iso): [Descarga](https://releases.ubuntu.com/focal/)
 
-Opción Máquina Virtual:[pasos](./Doc/0-Maquina-Virtual.md)
+Opción Máquina Virtual:[Tutorial](./Doc/0-Maquina-Virtual.md)
 
 Opcion Partición del disco (Cambiar por la Iso 20.04): [Tutorial](https://www.youtube.com/watch?v=_d6oT7rEoGc)
 
