@@ -1,9 +1,10 @@
 # Instalacion de Ubuntu 20.04 con VirtualBox
 
-1.  [Descargar VirtualBox] (https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html) 
-Elegir el sistema operativo
+1.  [Descargar VirtualBox] (https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html)
 
-2. Configuracion de VirtualBOX
+![Seleccion](./Doc)
+
+3. Configuracion de VirtualBOX
 
 
 ***Posibles Errores*** -
