@@ -9,8 +9,8 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
 * [1. Introducción](#1-Introducción)
 * [2. GitHub y ROS  ](#2-GitHub-y-ROS )
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
-* [4. Intercambio de mensajes en ROS](#4-Intercambio-de-mensajes-en-ROS)
-    * [4.1 Estructura de mensajes] 
+* [4. Comunicación entre Nodos](#4-Comunicación-entre-Nodos)
+    * [4.1 Estructura de mensajes](#Mensajes)
     * [4.2 Mensajes Propios](#Mensajes-propios)
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
     * 5.1 Servicios
@@ -121,11 +121,13 @@ Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un siste
 * Modularidad: Facilita la modularización del software, permitiendo que diferentes funcionalidades sean desarrolladas y mantenidas de manera independiente.
 
 [***3-Ejemplo***](./Clases/3-0-Paquetes.md)
-# 4. Intercambio de mensajes en ROS
+# 4. Comunicación entre Nodos
+
 * Mensajes y Temas: Los nodos pueden publicar y suscribirse a temas para intercambiar mensajes. Por ejemplo, un nodo de cámara puede publicar imágenes en un tema, mientras que un nodo de procesamiento de imágenes se suscribe a ese tema para recibir y procesar las imágenes.
-  
+## Mensajes de ROS
+Los paquetes de mensajes de ROS contien una serie de estructuras para lograr el intercambio de información dependiento del tipo de dato que se requira intercambiar.
 ## Mensajes propios
-  
+ROS nos da la versatilidad de crear nuestras propias estructuras para el intercambio de información esto lo podemos lograr a través de la creación de nuestros propios mensajes.
  [***4-Ejemplo***](./Clases/3-1-mensajes.md)
 # 5. Servicios y Acciones
 * Servicios: Permiten la comunicación de solicitud-respuesta entre nodos. Un nodo puede ofrecer un servicio y otro nodo puede llamarlo para realizar una operación específica.
