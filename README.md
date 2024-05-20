@@ -55,6 +55,8 @@ Conceptos generales sobre el uso de ROS [Resumen](./Doc/1_ROS.pdf)
 [Wiki-ROS-Conceptos](https://wiki.ros.org/es/ROS/Conceptos)
 
 [Wiki-ROS-Tutoriales](https://wiki.ros.org/ROS/Tutorials)
+
+[***1- Ejemplo***](./Clases/1-Introduccion-Paquetes.md)
 # 2. GitHub y ROS 
 
 GitHub y ROS (Robot Operating System) están estrechamente relacionados en el desarrollo de software robótico:
@@ -118,7 +120,7 @@ Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un siste
 * Comunicación: Los nodos se comunican entre sí utilizando mensajes, temas (topics), servicios y acciones.
 * Modularidad: Facilita la modularización del software, permitiendo que diferentes funcionalidades sean desarrolladas y mantenidas de manera independiente.
 
-[***3- Ejemplo***](./Clases/1-Introduccion-Paquetes.md)
+
 # 4. Intercambio de mensajes en ROS
 * Mensajes y Temas: Los nodos pueden publicar y suscribirse a temas para intercambiar mensajes. Por ejemplo, un nodo de cámara puede publicar imágenes en un tema, mientras que un nodo de procesamiento de imágenes se suscribe a ese tema para recibir y procesar las imágenes.
 # 5. Servicios y Acciones
