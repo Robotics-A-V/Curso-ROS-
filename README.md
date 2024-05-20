@@ -10,8 +10,8 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
 * [2. GitHub y ROS  ](#2-GitHub-y-ROS )
 * [3. Paquetes y Nodos ](#3-Paquetes-y-Nodos)
 * [4. Intercambio de mensajes en ROS](#4-Intercambio-de-mensajes-en-ROS)
-    * 4.1 Estructura de mensajes 
-    * 4.2 Mensajes Propios
+    * [4.1 Estructura de mensajes] 
+    * [4.2 Mensajes Propios](#Mensajes-propios)
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
     * 5.1 Servicios
     * 5.2 Acciones
@@ -123,6 +123,8 @@ Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un siste
 [***3-Ejemplo***](./Clases/3-0-Paquetes.md)
 # 4. Intercambio de mensajes en ROS
 * Mensajes y Temas: Los nodos pueden publicar y suscribirse a temas para intercambiar mensajes. Por ejemplo, un nodo de cámara puede publicar imágenes en un tema, mientras que un nodo de procesamiento de imágenes se suscribe a ese tema para recibir y procesar las imágenes.
+  
+## Mensajes propios
   
  [***4-Ejemplo***](./Clases/3-1-mensajes.md)
 # 5. Servicios y Acciones
