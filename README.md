@@ -123,6 +123,7 @@ Un nodo en ROS es una instancia de un proceso que realiza cálculos. En un siste
 [***3-Ejemplo***](./Clases/3-0-Paquetes.md)
 # 4. Intercambio de mensajes en ROS
 * Mensajes y Temas: Los nodos pueden publicar y suscribirse a temas para intercambiar mensajes. Por ejemplo, un nodo de cámara puede publicar imágenes en un tema, mientras que un nodo de procesamiento de imágenes se suscribe a ese tema para recibir y procesar las imágenes.
+  
  [***4-Ejemplo***](./Clases/3-1-mensajes.md)
 # 5. Servicios y Acciones
 * Servicios: Permiten la comunicación de solicitud-respuesta entre nodos. Un nodo puede ofrecer un servicio y otro nodo puede llamarlo para realizar una operación específica.
