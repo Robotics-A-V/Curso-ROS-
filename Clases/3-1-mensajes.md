@@ -23,6 +23,28 @@ if __name__ == '__main__':
 	except rospy.ROSInterruptException:
 		pass
 ```
+* La estructura basica de un nodo suscriptor posee el siguiente codigo escrito en python, dicho codigo se suscribe a un topic y muestra por consola el mensaje recibido.
+```
+#!/usr/bin/env python3
+
+import rospy
+from std_msgs.msg import String
+
+def callback(dato):
+	print("El mensaje recibido es: ")
+	print(dato.data)
+
+def funcion_principal():
+	rospy.Subscriber("Topic_mensaje" , String , callback)
+	rospy.init_node('Nodo_suscriptor',anonymous=True)
+	rospy.spin()
+
+if __name__=='__main__':
+	try:
+		funcion_principal()
+	except rospy.ROSInterruptException:
+		pass
+```
 * Ejemplo de entrada de dos numeros y publicacion de su suma y resta
 ```
 #!/usr/bin/env python3
@@ -48,29 +70,6 @@ if __name__ == '__main__':
 	except rospy.ROSInterruptException:
 		pass
 ```
-* La estructura basica de un nodo suscriptor posee el siguiente codigo escrito en python, dicho codigo se suscribe a un topic y muestra por consola el mensaje recibido.
-```
-#!/usr/bin/env python3
-
-import rospy
-from std_msgs.msg import String
-
-def callback(dato):
-	print("El mensaje recibido es: ")
-	print(dato.data)
-
-def funcion_principal():
-	rospy.Subscriber("Topic_mensaje" , String , callback)
-	rospy.init_node('Nodo_suscriptor',anonymous=True)
-	rospy.spin()
-
-if __name__=='__main__':
-	try:
-		funcion_principal()
-	except rospy.ROSInterruptException:
-		pass
-```
-
 
 # Creacion de mensajes propios en ROS
 * Dentro de la carpeta src del espacio de trabajo creamos un nuevo paquete, el cual contendra los mensajes que generemos, la creacion de dicho paquete se realiza con el comando:
