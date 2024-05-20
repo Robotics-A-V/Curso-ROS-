@@ -105,7 +105,7 @@ if __name__ == '__main__':
 ```
 Utilizando la estructura **rospy.spin**
 ```
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
 
