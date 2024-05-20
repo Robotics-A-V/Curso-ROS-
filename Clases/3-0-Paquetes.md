@@ -78,72 +78,51 @@ gedit [Nombre_del_archivo.py]
 ```
 chmod +x [Nombre_del_archivo.py]
 ```
-* La estructura basica de un nodo publicador posee el siguiente codigo escrito en python, dicho codigo publica un "Hola mundo" en un topic de ROS
 
+* Estructura básica de los nodos
+
+Utilizando la estructura del bucle **not rospy.is_shutdown()**
 ```
 #!/usr/bin/env python3
 
 import rospy
-from std_msgs.msg import String
 
-def talker():
-	pub = rospy.Publisher('Topic_mensaje', String , queue_size=1)
-	rospy.init_node('Nodo_publicador',anonymous=True)
-	rate = rospy.Rate(1) # 1 Hz
-	while not rospy.is_shutdown():
-		pub.publish("Hola mundo")
-		rate.sleep()
+def main():
+    # Inicializa el nodo con el nombre 'primer_nodo'
+    rospy.init_node('primer_nodo', anonymous=True)
+    # Define la frecuencia del bucle en 1 Hz
+    rate = rospy.Rate(1)  # 1 Hz
+
+    while not rospy.is_shutdown():
+        rospy.loginfo("Mi primer nodo en ROS - while not rospy.is_shutdown()")
+        rate.sleep()
 
 if __name__ == '__main__':
-	try:
-		talker()
-	except rospy.ROSInterruptException:
-		pass
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass
 ```
-* Ejemplo de entrada de dos numeros y publicacion de su suma y resta
+Utilizando la estructura **rospy.spin**
 ```
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import rospy
-from std_msgs.msg import Int16
 
-def talker():
-	pub = rospy.Publisher('topic_suma', Int16 , queue_size=1)
-	pub2 = rospy.Publisher('topic_resta', Int16 , queue_size=1)
-	rospy.init_node('Nodo_operaciones',anonymous=True)
-	rate = rospy.Rate(1) # 1 Hz
-	while not rospy.is_shutdown():
-		mensaje1 = int(input("Ingrese un numero: "))
-		mensaje2 = int(input("Ingrese otro numero: "))
-		pub.publish(mensaje1+mensaje2)
-		pub2.publish(mensaje1-mensaje2)
-		rate.sleep()
+def timer_callback(event):
+    rospy.loginfo("Mi primer nodo en ROS - rospy.spin()")
+
+def main():
+    # Inicializa el nodo con el nombre 'segundo_nodo'
+    rospy.init_node('segundo_nodo', anonymous=True)
+    # Configura un temporizador que llama a 'timer_callback' cada segundo
+    rospy.Timer(rospy.Duration(1), timer_callback)
+    # Mantiene el nodo activo
+    rospy.spin()
 
 if __name__ == '__main__':
-	try:
-		talker()
-	except rospy.ROSInterruptException:
-		pass
-```
-* La estructura basica de un nodo suscriptor posee el siguiente codigo escrito en python, dicho codigo se suscribe a un topic y muestra por consola el mensaje recibido.
-```
-#!/usr/bin/env python3
-
-import rospy
-from std_msgs.msg import String
-
-def callback(dato):
-	print("El mensaje recibido es: ")
-	print(dato.data)
-
-def funcion_principal():
-	rospy.Subscriber("Topic_mensaje" , String , callback)
-	rospy.init_node('Nodo_suscriptor',anonymous=True)
-	rospy.spin()
-
-if __name__=='__main__':
-	try:
-		funcion_principal()
-	except rospy.ROSInterruptException:
-		pass
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass
 ```
