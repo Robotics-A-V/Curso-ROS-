@@ -44,3 +44,18 @@ roscore
 ![xArmFrames](0_comprobacion_instalacion.png)   
 
 [ir a Introducción](https://github.com/Robotics-A-V/Curso-ROS-/tree/main/#9-Coppeliasim))
+
+
+Posibles errores:
+
+**Tu Usuario** no está en el archivo sudousers
+
+**solucion**
+en la terminal coloco 
+```
+su -
+```
+posteriormente agrego el nombre de usuario
+```
+sudo adduser [su nombre de usuario] sudo
+```
