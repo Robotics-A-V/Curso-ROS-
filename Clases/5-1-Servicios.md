@@ -34,19 +34,9 @@ int64 altura
 
  aproximadamente linea 59
 
-Descomentamos la generacion de servicios
-Agregamos el servicio
-Descomentamos la generacion de mensajes
+Descomentamos la generacion de servicios, agregamos el servicio creado y descomentamos la generacion de mensajes
 
 ```
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
-  std_msgs
-  message_generation
-)
-
-
  add_service_files(
     FILES
     cinematicaI.srv
@@ -57,18 +47,13 @@ DEPENDENCIES
 std_msgs
  )
 ```
-
-
  en el archivo package.xml revisar que existe la linea de código:
 
 ```
-
     <build_depend>message_generation</build_depend>
-
 ```
-* abrimos un nuevo terminal y colocamos:
+* Ingresamos a nuestro espacio de trabajo y compilamos 
 ```
-  cd Curso_ros
   catkin_make
 ```
 inicializamos nuestro entorno de ROS
@@ -79,7 +64,7 @@ colocamos para compronbar
 ```
 rossrv show cinematicaI
 ```
-nodo_server.py
+Ahora crearemos el servidor **nodo_server.py**
 ```
 #!/usr/bin/env python3                         
 # encoding: utf-8
@@ -120,6 +105,7 @@ if __name__ == '__main__':
         pass                                                                            
  ```
 
+ahora creamos el **cliente** 
 nodo_cliente.py
 ```
 
