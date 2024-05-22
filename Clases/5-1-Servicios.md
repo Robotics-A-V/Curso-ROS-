@@ -108,7 +108,7 @@ if __name__ == '__main__':
 llamado del servicio desde el terminal 
 
 ```
-rosservice call
+rosservice call /CinematicaI
 ```
 
 ahora creamos el **cliente** 
