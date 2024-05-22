@@ -105,6 +105,11 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException:       
         pass                                                                                                                                                     
  ```
+llamado del servicio desde el terminal 
+
+```
+rosservice call
+```
 
 ahora creamos el **cliente** 
 nodo_cliente.py
