@@ -69,28 +69,30 @@ Ahora crearemos el servidor **nodo_server.py**
 #!/usr/bin/env python3                         
 # encoding: utf-8
 
-import rospy                                                                #Importamos ropsy (interface de python-ROS)
+import rospy                                                       #Importamos ropsy (interface de python-ROS)
 from std_msgs.msg import Float32MultiArray
-from ros_23.srv import cinematicaI, cinematicaIResponse                     #Importamos módulos generados por nuestro servicio
+from pkg_msg_curso.srv import cinematicaI, cinematicaIResponse     #Importamos módulos generados por nuestro servicio
 
 
 def calculoCI(req):
     #Definimos para procesar la data enviada por el Cliente
     print ("Returning C.I. ")      
-    #Imprimimos en pantalla los valores que recibimos
-    #ecuaciones del caculo
-    
+    #Ecuaciones del caculo
+    #-
+    #-
+    #-
     # respuesta
     angulos = Float32MultiArray()
     angulos.data = [req.x+0.2, req.y+0.3]
     
-    return cinematicaIResponse(angulos.data, req.x,)                            #Retornamos al Cliente, el resultado de la suma de dos números enteros
+    return cinematicaIResponse(angulos.data, req.z)         #Retornamos al Cliente, el resultado 
 
-def nodo():                                                                 #Definimos una función nodo                                   
+def nodo():                                                                                         
 
-    rospy.init_node('nodo_cinameticaI_server')                            #Inicializamos nuestro nodo y le asignamos un nombre = nodo_suma_two_ints_server
+    rospy.init_node('nodo_cinameticaI_server') 
 
-    #Declaramos nuestro Servicio Server    
+    #Declaramos nuestro Servicio Server 
+       
                       #Nombre del servicio | Clase Servicio|Función para procesar la data enviada por el Cliente     
     s = rospy.Service('CinematicaI', cinematicaI, calculoCI)   
 
@@ -100,33 +102,30 @@ def nodo():                                                                 #Def
 
 if __name__ == '__main__':                                  
     try:
-        nodo()                                                              # Lamamos a la función nodo
-    except rospy.ROSInterruptException:                                     # Check si hay una excepción  Ctrl-C para terminar la ejecución del nodo
-        pass                                                                            
+        nodo()                                                             
+    except rospy.ROSInterruptException:       
+        pass                                                                                                                                                     
  ```
 
 ahora creamos el **cliente** 
 nodo_cliente.py
 ```
-
 #!/usr/bin/env python3                         
 # encoding: utf-8
 
-import rospy                              #Importamos ropsy (interface de python-ROS)
-from ros_23.srv import cinematicaI        #Importamos el modulo generado por nuestro servicio
+import rospy                                    
+from pkg_msg_curso.srv import cinematicaI
 
-def cinameticaI_client(x, y, z):               #Definimos una función para enviar la data al Service Server y obtener el resultado
+#Definimos una función para enviar la data al Service Server y obtener el resultado
+def cinameticaI_client(x, y, z):           
     rospy.wait_for_service('CinematicaI')  #Esperamos el servicio si no está listo                                                                
     try:
-        #Definimos el Servicio Cliente en la variable add_two_ints
+        #Definimos el Servicio Cliente 
                                           #Nombre Servicio|Clase Servicio
         calculo = rospy.ServiceProxy('CinematicaI', cinematicaI)  
         resp = calculo(x, y, z)       #Enviamos la data para ser procesada en el Service Server
 
-
         # Continuo con el ejercicio
-
-
 
         # ------------------------
         return resp.altura , resp.angulos                #Retornamos el resultado de la operación
@@ -146,7 +145,9 @@ def nodo():                                       #Definimos una función nodo
 
     #Imprimimos el resultado de la operación de los dos números enteros
     #La operación de CI cinameticaI_client
-    print(cinameticaI_client(x, y, z))
+    valor1, valor2 = cinameticaI_client(x, y, z)
+
+    print("La altura en Z es:",valor1)
 
 
 if __name__ == '__main__':                                  
