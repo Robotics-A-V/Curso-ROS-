@@ -1,10 +1,14 @@
+https://wiki.ros.org/srv
+Primero crearemos un paquete con las dependencias necesarias para generar un servicio (SRV)
+```
+catkin_create_pkg pkg_msg_curso roscpp rospy std_msgs message_generation message_runtime
+```
 creamos la carpeta srv
 
 ```
 mkdir srv
 ```
 y ejecutamos visual studio code
-
 ```
 code .
 ```
@@ -33,7 +37,6 @@ int64 altura
 Descomentamos la generacion de servicios
 Agregamos el servicio
 Descomentamos la generacion de mensajes
-
 
 ```
 find_package(catkin REQUIRED COMPONENTS
