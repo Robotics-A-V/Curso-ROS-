@@ -13,8 +13,6 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
     * [4.1 Estructura de mensajes](#Mensajes)
     * [4.2 Mensajes Propios](#Mensajes-propios)
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
-    * 5.1 Servicios
-    * 5.2 Acciones
 * [6. Comunicación con dispositivos](#6-Comunicación-con-dispositivos)
     * 6.1 Serial - Arduino ID
     * 6.2 Mqtt - ESP32
