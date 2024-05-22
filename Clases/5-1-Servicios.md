@@ -50,11 +50,11 @@ std_msgs
  en el archivo package.xml revisar que existe la linea de código:
 
 ```
-    <build_depend>message_generation</build_depend>
+<build_depend>message_generation</build_depend>
 ```
 * Ingresamos a nuestro espacio de trabajo y compilamos 
 ```
-  catkin_make
+catkin_make
 ```
 inicializamos nuestro entorno de ROS
 ```
