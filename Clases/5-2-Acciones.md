@@ -49,8 +49,8 @@ float32 percent_distancia_recorrida # Porcentaje completado
 es necesario agregar el archivo .action
 
 nota: cuando no se agregan desde el inicio las dependencias action es necesario agregar  los siguientes paquetes: actionlib, actionlib_msgs, message_generation, geometry_msgs
-```
 
+```
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -80,7 +80,7 @@ tambien es necesario remplazar la linea 110 aproximandemente por:
 ```
   CATKIN_DEPENDS actionlib_msgs actionlib
 ```
-```
+
 Nota: mientras que en el archivo package.xml es necesario agregar las siguientes dependencias 
 
 ```
