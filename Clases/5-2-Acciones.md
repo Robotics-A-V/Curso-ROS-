@@ -48,7 +48,7 @@ float32 percent_distancia_recorrida # Porcentaje completado
 
 * moficamos el archivo CMakelist.list de la siguiente forma:
 
-nota: los paquetes que contiene action necesitan de los paquetes: actionlib, actionlib_msgs, message_generation
+nota: los paquetes que contiene action necesitan de los paquetes: actionlib, actionlib_msgs, message_generation, geometry_msgs
 ```
 
 find_package(catkin REQUIRED COMPONENTS
