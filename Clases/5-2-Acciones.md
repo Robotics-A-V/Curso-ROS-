@@ -30,8 +30,6 @@ code .
 
 trayectoria2.action
 
-
-
 * Dentro de la carpeta action creamos un nuevo archivo con el nombre "trayectoria2.action"
 
 * Agregamos la estructura del archivo
@@ -48,17 +46,19 @@ float32 percent_distancia_recorrida # Porcentaje completado
 
 * moficamos el archivo CMakelist.list de la siguiente forma:
 
-nota: los paquetes que contiene action necesitan de los paquetes: actionlib, actionlib_msgs, message_generation, geometry_msgs
+es necesario agregar el archivo .action
+
+nota: cuando no se agregan desde el inicio las dependencias action es necesario agregar  los siguientes paquetes: actionlib, actionlib_msgs, message_generation, geometry_msgs
 ```
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  actionlib
-  actionlib_msgs
-  message_generation
-  geometry_msgs
+  actionlib  #paquete agregado
+  actionlib_msgs #paquete agregado
+  message_generation #paquete agregado
+  geometry_msgs #paquete agregado para el uso de un tipo de mensaje específico
 )
 
 add_action_files(
@@ -75,11 +75,28 @@ generate_messages(
    geometry_msgs
  )
 
+tambien es necesario remplazar la linea 110 aproximandemente por:
+
+```
+  CATKIN_DEPENDS actionlib_msgs actionlib
+```
+```
+Nota: mientras que en el archivo package.xml es necesario agregar las siguientes dependencias 
+
+```
+<build_depend>actionlib</build_depend>
+<build_depend>actionlib_msgs</build_depend>
+<build_depend>message_generation</build_depend>
+<build_export_depend>actionlib</build_export_depend>
+<build_export_depend>actionlib_msgs</build_export_depend>
+<exec_depend>actionlib</exec_depend>
+<exec_depend>actionlib_msgs</exec_depend>
+<build_depend>geometry_msgs</build_depend>
+<build_export_depend>geometry_msgs</build_export_depend>
+<exec_depend>geometry_msgs</exec_depend>
 ```
 
-en el archivo package.xml
+revisamos que esté funcionando usando el comando 
 ```
- <build_depend>geometry_msgs</build_depend>
-  <build_export_depend>geometry_msgs</build_export_depend>
-  <exec_depend>geometry_msgs</exec_depend>
+rosmsg list | grep trayectoria2
 ```
