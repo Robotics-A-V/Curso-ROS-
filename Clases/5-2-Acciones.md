@@ -74,7 +74,7 @@ generate_messages(
    actionlib_msgs
    geometry_msgs
  )
-
+```
 tambien es necesario remplazar la linea 110 aproximandemente por:
 
 ```
