@@ -12,7 +12,7 @@ Las acciones se definen en archivos .action y requieren un servidor de acción y
 
 Creamos el paquete 
 ```
-catkin_create_pkg paquete_acciones_a roscpp rospy std_msgs actionlib actionlib_msgs message_generation
+catkin_create_pkg paquete_acciones_a roscpp rospy std_msgs actionlib actionlib_msgs message_generation geometry_msgs 
 ```
 
 Ingresamos a nuestro paquete creado y creamos una carpeta llamada action
