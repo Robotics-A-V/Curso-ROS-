@@ -75,7 +75,7 @@ generate_messages(
    geometry_msgs
  )
 ```
-tambien es necesario remplazar la linea 110 aproximandemente por:
+Nota: tambien es necesario remplazar la linea 110 aproximandemente por:
 
 ```
   CATKIN_DEPENDS actionlib_msgs actionlib
