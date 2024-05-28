@@ -146,6 +146,12 @@ class DoActionServer:
         rate = rospy.Rate(10)                 #Loop 10hz
         pub = rospy.Publisher("/turtle1/cmd_vel", Twist , queue_size=10)
         for punto in range(0,len(goal.velocidades)):
+
+            if self.server.is_preempt_requested():
+                rospy.loginfo('Preempted')
+                self.server.set_preempted()
+                return
+            
             pub.publish(goal.velocidades[punto])
             result.total_distancia_recorrida += 1
             feedback.percent_distancia_recorrida = (result.total_distancia_recorrida*100.0)/len(goal.velocidades)
@@ -170,12 +176,15 @@ import actionlib                                                #Importamos acti
 from paquete_action_a.msg import trayectoria2Action, trayectoria2Goal   #Importamos los mensajes de nuestra acción
 from geometry_msgs.msg import Twist
 
-def feedback_cb(msg):                                           #Definimos una función feedback_cb
-
-    print('Feedback received -> '+str(msg)+'%')                 #Imprimimos en pantalla el feebback que envía el Action Server
-
+def feedback_cb(msg):                              #Definimos una función feedback_cb
+    limite = msg.percent_distancia_recorrida
+    print('Feedback received -> '+str(msg)+'%')    #Imprimimos en pantalla el feebback que envía el Action Server
+    if limite > 30.0:
+        rospy.loginfo('Cancelling goal because progress is over 50%')
+        client.cancel_goal()
 
 def call_server():                                                        #Definimos una función call_server
+    global client
 
     client = actionlib.SimpleActionClient('control_de_trayectoria', trayectoria2Action) #Declaramos nuestra Acción Cliente con nombre do_wash_car
 
