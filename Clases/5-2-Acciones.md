@@ -12,7 +12,7 @@ Las acciones se definen en archivos .action y requieren un servidor de acción y
 
 Creamos el paquete 
 ```
-catkin_create_pkg pkg_action_a roscpp rospy std_msgs actionlib actionlib_msgs message_generation geometry_msgs 
+catkin_create_pkg paquete_action_a roscpp rospy std_msgs actionlib actionlib_msgs message_generation geometry_msgs 
 ```
 
 Ingresamos a nuestro paquete creado y creamos una carpeta llamada action
@@ -113,7 +113,7 @@ import rospy       #Importamos ropsy (interface de python-ROS)
 
 import actionlib     #Importamos actionlib para hacer uso de acciones en ROS
 
-from paquete_acciones.msg import trayectoria2Action,trayectoria2Result,trayectoria2Feedback
+from paquete_action_a.msg import trayectoria2Action,trayectoria2Result,trayectoria2Feedback
 #Importamos los mensajes de nuestra acción
 
 from geometry_msgs.msg import Twist
@@ -153,7 +153,7 @@ trayectoria_cliente.py
 
 import rospy                                                    #Importamos ropsy (interface de python-ROS)
 import actionlib                                                #Importamos actionlib para hacer uso de acciones en ROS
-from paquete_acciones.msg import trayectoria2Action, trayectoria2Goal   #Importamos los mensajes de nuestra acción
+from paquete_action_a.msg import trayectoria2Action, trayectoria2Goal   #Importamos los mensajes de nuestra acción
 from geometry_msgs.msg import Twist
 
 def feedback_cb(msg):                                           #Definimos una función feedback_cb
