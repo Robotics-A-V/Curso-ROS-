@@ -107,6 +107,14 @@ revisamos que esté funcionando usando el comando
 rosmsg list | grep trayectoria2
 ```
 
+otros comandos útiles para obtener información general
+
+```
+rospack find geometry_msgs
+rosmsg package geometry_msgs
+rosmsg show geometry_msgs/PoseStamped
+```
+
 Dentro de la carpeta src agrego los siguientes programas 
 
 trayectoria_servidor.py
