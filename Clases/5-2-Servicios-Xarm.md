@@ -74,6 +74,11 @@ roslaunch xarm7_moveit_config xarm7_moveit_gazebo.launch #Terminal 2
 roslaunch xarm7_moveit_config realMove_exec.launch robot_ip:=192.168.0.1 [velocity_control:=false] [report_type:=normal]
 ```
 
+Simulador actual
 ```
 roslaunch xarm_planner xarm_planner_rviz_sim.launch robot_dof:=6 robot_type:=lite  add_gripper:=false add_vacuum_gripper:=true
+```
+https://github.com/xArm-Developer/xarm_ros/blob/master/xarm_planner/ReadMe.md
+```
+rosservice call xarm_joint_plan 'target: [1.0, -0.5, 0.0, -0.3, 0.0, 0.0]'
 ```
