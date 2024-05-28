@@ -31,10 +31,10 @@ rosdep update
 ```
 
 ```
-rosdep check --from-paths . --ignore-src --rosdistro melodic
+rosdep check --from-paths . --ignore-src --rosdistro noetic
 ```
 ```
-rosdep install --from-paths . --ignore-src --rosdistro melodic -y
+rosdep install --from-paths . --ignore-src --rosdistro noetic -y
 ```
 #De no funcionar el codigo utilizar
 ```
