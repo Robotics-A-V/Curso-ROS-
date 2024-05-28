@@ -27,8 +27,9 @@ code .
 ```
 
 # Trayectorias
-
+```
 trayectoria2.action
+```
 
 * Dentro de la carpeta action creamos un nuevo archivo con el nombre "trayectoria2.action"
 
