@@ -231,3 +231,24 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException :                                 #Check si hay una excepción  Ctrl-C para terminar la ejecución del nodo
         pass
 ```
+
+# Prática 
+
+Para revisar el funcionamiento básico de un action, utilizaremos el paquete turtlesim, ejecutamos los siguientes comandos en terminales diferentes:
+
+terminal 1 
+```
+roscore
+```
+terminal 2 - Ejectuamos el nodo Turtlesim
+```
+rosrun turtlesim turtlesim_node
+```
+terminal 3 - Ejectuamos el servidor de nuestro action
+```
+rosrun paquete_action_a server_trayectoria.py 
+```
+terminal 4 - Ejecutamos el cliente de nuestro action
+```
+rosrun paquete_action_a cliente_trayectoria.py 
+```
