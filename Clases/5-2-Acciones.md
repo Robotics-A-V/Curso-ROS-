@@ -76,10 +76,15 @@ generate_messages(
    geometry_msgs
  )
 ```
-Nota: tambien es necesario remplazar la linea 110 aproximandemente por:
+Nota: tambien es necesario remplazar la linea 113 aproximandemente por:
 
 ```
-  CATKIN_DEPENDS actionlib_msgs actionlib
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES paquete_action_a
+CATKIN_DEPENDS actionlib actionlib_msgs 
+#  DEPENDS system_lib
+)
 ```
 
 Nota: mientras que en el archivo package.xml es necesario agregar las siguientes dependencias 
