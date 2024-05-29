@@ -13,11 +13,11 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
     * [4.1 Estructura de mensajes](#Mensajes)
     * [4.2 Mensajes Propios](#Mensajes-propios)
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
-* [6. Comunicación con dispositivos](#6-Comunicación-con-dispositivos)
-    * 6.1 Serial - Arduino ID
-    * 6.2 Mqtt - ESP32
-* [7. Robot 3 GDL](#7-Robot-3-GDL)
-* [8. Rviz MoveiT](#8-Rviz-Movei)
+* [6. Robot 3 GDL](#6-Robot-3-GDL)
+* [7. Comunicación con dispositivos](#7-Comunicación-con-dispositivos)
+    * 7.1 Serial - Arduino ID
+    * 7.2 Mqtt - ESP32
+* [8. Rviz MoveiT](#8-Rviz-MoveiT)
 * [9. Coppeliasim](#9-Coppeliasim)
   
 # 0. Prerrequisitos
@@ -139,8 +139,9 @@ ROS nos da la versatilidad de crear nuestras propias estructuras para el interca
 
 [Ejemplos](./Clases/5-2-Acciones.md)
 
-# 6. Comunicación con dispositivos
-# 7. Robot 3 GDL
+
+# 6. Robot 3 GDL
+# 7. Comunicación con dispositivos
 # 8. Rviz MoveiT
 Instalar las dependencias
    gazebo_ros_pkgs: <http://gazebosim.org/tutorials?tut=ros_installing> 
