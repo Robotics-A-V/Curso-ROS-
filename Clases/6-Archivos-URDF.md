@@ -52,4 +52,29 @@ La estructura basica de un archivo launch para ejecutar el simulador de turtlesi
 ```
 
 La estructura basica de un archivo launch para ejecutar el modelo URDF de un robot de dos grados de libertad es la siguiente:
+```
+<launch>
 
+   <!-- Robot Scara -->
+   <arg name="model" default="Robot_Scara.urdf"/>
+
+   <!-- Establece estos parametros en el servidor de parametros -->
+   <param name="robot_description" textfile="$(find paquete_rviz)/urdf/$(arg model)" />
+
+   <!-- El siguiente paquete publica el estado del modelo URDF -->
+   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+   <!-- El siguiente paquete publica la transformacion entre marcos de referencia del entorno RVIZ y el eslabon base -->
+   <node name="Transformacion_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map base 100" />
+
+   <!-- El siguiente paquete publica la transormacion entre marcos de referencia del eslabon base y el eslabon 1 -->
+   <node name="Transformacion_eslabon1" pkg="tf" type="static_transform_publisher" args="0 0.050 0 0 0 0 base eslabon1 100" />
+
+   <!-- El siguiente paquete publica la transormacion entre marcos de referencia del eslabon 1 y el eslabon 2 -->
+   <node name="Transformacion_eslabon2" pkg="tf" type="static_transform_publisher" args="0.100 0 0.040 0 0 0 eslabon1 eslabon2 100" />
+
+   <!-- El siguiente paquete publica la transormacion entre marcos de referencia del eslabon 2 y el eslabon 3 -->
+   <node name="Transformacion_eslabon3" pkg="tf" type="static_transform_publisher" args="0.070 0 0.040 0 0 0 eslabon2 eslabon3 100" />
+
+</launch>
+```
