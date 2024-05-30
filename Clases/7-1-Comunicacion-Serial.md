@@ -79,7 +79,7 @@ void loop(){
 }
 ```
 
-* Para la lectura de las se;ales publicadas en los topicos desde Arduino se puede utilizar el siguiente codigo en python para la presentacion en consola:
+* Para la lectura de las señales publicadas en los topicos desde Arduino se puede utilizar el siguiente codigo en python para la presentacion en consola:
 
 ```
 #!/usr/bin/env python3
@@ -114,7 +114,7 @@ if __name__=='__main__':
 		pass
 
 ```
-* Para el control del modelo URDF del robot de dos grados de libertad se puede usar el siguiente codigo en python, el cual se suscribira a los topicos donde se estan publicando las se;ales analogicas y publicara en el topico adecuado para el control de las juntas:
+* Para el control del modelo URDF del robot de dos grados de libertad se puede usar el siguiente codigo en python, el cual se suscribira a los topicos donde se estan publicando las señales analogicas y publicara en el topico adecuado para el control de las juntas:
 ```
 #!/usr/bin/env python3
 
