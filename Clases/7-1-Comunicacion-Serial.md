@@ -30,7 +30,7 @@ abrira una nueva terminal y se escribira el siguiente comando:
 ```
 ls -l /dev/ttyACM*
 ```
-* Es necesario a;adir el usuario mediante el siguiente comando:
+* Es necesario añadir el usuario mediante el siguiente comando:
 
 ```
 sudo usermod -a -G dialout [Nombre_de_usuario]
