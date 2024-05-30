@@ -139,8 +139,13 @@ ROS nos da la versatilidad de crear nuestras propias estructuras para el interca
 
 [Ejemplos](./Clases/5-2-Acciones.md)
 
-
 # 6. Robot 3 GDL
+
+A continuacion, para implementar el uso de la herramienta de visualización virtual RVIZ, diseñaremos un robots de 3 grados de libertad RRP, el diseño CAD se puede implementar en SOLIDWORKS, INVENTOR, FUSION, entre otros.
+
+El objetivo es definir las relaciones entre eslabones y generar un archivo URDF. 
+
+[Ejemplo](./Clases/6-Archivos-URDF.md)
 # 7. Comunicación con dispositivos
 # 8. Rviz MoveiT
 Instalar las dependencias
