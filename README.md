@@ -145,6 +145,9 @@ A continuacion, para implementar el uso de la herramienta de visualización virt
 
 El objetivo es definir las relaciones entre eslabones y generar un archivo URDF. 
 
+
+![Diseño Basico ](./robotRRP.png)
+
 [Ejemplo](./Clases/6-Archivos-URDF.md)
 # 7. Comunicación con dispositivos
 # 8. Rviz MoveiT
