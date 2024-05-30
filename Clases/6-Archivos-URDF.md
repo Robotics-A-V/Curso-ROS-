@@ -78,3 +78,67 @@ La estructura basica de un archivo launch para ejecutar el modelo URDF de un rob
 
 </launch>
 ```
+
+# Entorno de RVIZ
+* Para correr el entorno de rviz abrimos una nueva terminal y ejecutamos *roscore*, seguido de eso en una nueva terminal escribimos:
+
+```
+rviz
+```
+* Si deseamos presentar un modelo URDF publicado atravez de un archivo .launch nos dirigimos a la parte inferior izquierda y presionamos en el boton *add* y en la nueva ventana que se despliega seleccionamos la opcion *RobotModel*. Para que el modelo se ejecute correctamente, es necesario que el entorno de Rviz pueda leer el estado del modelo URDF y las transformaciones de los sistemas de referencia de los distintos eslabones.
+* Para conservar las configuraciones del entorno podemos guardarlas en un archivo .rviz el mismo que puede ser llamado desde el propio archivo .launch con el siguiente bloque de programacion.
+
+```
+   <!-- Ejecuta el entorno y configuraciones de RVIZ -->
+   <node name="Entorno_Rviz" pkg="rviz" type="rviz" args="-d $(find paquete_rviz)/Entorno_rviz.rviz" />
+```
+El codigo basico para controlar el modelo del robot de 2 grados de libertad mediante la manipulacion de las juntas es el siguiente:
+```
+#!/usr/bin/env python
+
+import rospy
+from sensor_msgs.msg import JointState
+import math
+
+def envio_angulo_juntas():
+    # Inicializar el nodo ROS
+    rospy.init_node('Publicacion_angulos_juntas', anonymous=True)
+
+    # Crear un publicador para enviar los ángulos de las articulaciones
+    joint_state_publisher = rospy.Publisher('/joint_states', JointState, queue_size=10)
+
+    # Frecuencia de publicación en Hz
+    rate = rospy.Rate(10)  # 10 Hz
+
+    while not rospy.is_shutdown():
+
+        # Recibir los angulos de las juntas por consola
+        angulo1 = float(input("Ingrese el angulo 1: "))
+        angulo2 = float(input("Ingrese el angulo 2: "))
+
+        # Crear un mensaje de JointState
+        joint_state_msg = JointState()
+        joint_state_msg.header.stamp = rospy.Time.now()
+        joint_state_msg.name = ['rot1', 'rot2']  # Nombres de las articulaciones
+        joint_state_msg.position = [math.radians(angulo1) , math.radians(angulo2)]  # Ángulos de rotación en radianes
+
+        # Publicar el mensaje
+        joint_state_publisher.publish(joint_state_msg)
+
+        # Frecuencia de publicación
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        envio_angulo_juntas()
+    except rospy.ROSInterruptException:
+        pass
+```
+
+* Para evitar errores de ejecucion en el archivo .launch se deben borrar las transformaciones estaticas de los eslabones.
+* Para ejecutar el nodo de control de las articulaciones se debe agregar las siguientes lineas al archivo .launch
+
+```
+   <!-- Ejecuta el nodo que controla el robot 2 dof -->
+   <node name="Nodo_Control" pkg="paquete_rviz" type="Control_rviz_terminal.py" output="screen"/>
+```
