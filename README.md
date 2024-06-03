@@ -162,7 +162,7 @@ Para integrar dispositivos seriales con ROS, se suele utilizar el paquete rosser
 # MQTT (Message Queuing Telemetry Transport)
 MQTT es un protocolo ligero de mensajería de publicación/suscripción que es ideal para dispositivos con recursos limitados y redes con ancho de banda reducido. Se utiliza ampliamente en aplicaciones de IoT.
 
-[Ejemplo](./Clases/7-2-Comunicación-MQTT.md)
+[Ejemplo](./Clases/7-2-Comunicacion-MQTT.md)
 
 # 8. Rviz MoveiT
 Instalar las dependencias
