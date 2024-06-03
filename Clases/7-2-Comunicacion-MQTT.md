@@ -331,4 +331,185 @@ if __name__=='__main__':
         pass
 ```
 
+#ROS-MQTT
+
+
+
+```
+#!/usr/bin/env python3
+
+# Configuracion de librerias ROS
+import rospy
+from std_msgs.msg import Float32MultiArray
+
+# Configuración de librerias MQTT
+import paho.mqtt.client as mqtt
+import json
+
+# Funciones globales
+global mensaje_mqtt,mensaje_base
+mensaje_mqtt={}
+mensaje_base={}
+
+def IniciarMQTT():
+    global client
+    # Configuración del cliente MQTT
+    broker_address = "localhost"
+    client = mqtt.Client("Central_Activaciones")
+    client.connect(broker_address)
+    # Configurar la función "on_message" como callback para el cliente MQTT
+
+    
+def Enviar_Datos_3(accion,topic):
+    #print("Ingrese Envio Datos")
+    global client
+    aux = {}
+    aux["Accion"] = accion
+    #Convertir el diccionario en JSON
+    mensaje_json = json.dumps(aux)
+    client.publish(topic, mensaje_json,0)
+
+def Enviar_Datos_4(accion,topic):
+    #print("Ingrese Envio Datos")
+    global client
+    aux = {}
+    aux["Accion"] = accion
+    #Convertir el diccionario en JSON
+    mensaje_json = json.dumps(aux)
+    client.publish(topic, mensaje_json,0)
+
+
+def callback_3(dato):
+    print("Mensaje ROS para el equipo 3")
+    # Para el valor del sensor Ultrasónico
+    if(dato.data[0]>0):
+        Enviar_Datos_3("Encendido", "Acciones_3")
+    else:
+        Enviar_Datos_3("Apagado", "Acciones_3")
+
+def callback_4(dato):
+    print("Mensaje ROS para el equipo 4")
+    if(dato.data[0]>10):
+        Enviar_Datos_4("Encendido","Acciones_4")
+    else:
+        Enviar_Datos_4("Apagado", "Acciones_4")
+
+def talker():
+    global client
+    # Iniciar nodo ROS
+    rospy.init_node('nodo_mqtt_posiciones', anonymous = True)
+    # Declaracion de frecuencia de ejecución
+    rospy.Subscriber('Sensores_3', Float32MultiArray, callback_3)
+    rospy.Subscriber('Sensores_4', Float32MultiArray, callback_4)
+    client.loop_forever()
+    rospy.spin()
+
+
+if __name__=='__main__':
+    try:
+        IniciarMQTT()
+        talker()
+    except rospy.ROSInterruptException:
+        pass
+
+```
+
+#MQTT
+
+
+```
+import paho.mqtt.client as mqtt
+import json
+import time
+
+# Variables globales
+global diccionario
+
+# Configuración del cliente MQTT
+broker_address = "localhost"
+client = mqtt.Client("Central_Nodo")
+client.connect(broker_address)
+
+# Función que se ejecuta cuando llega un mensaje
+def on_message(client, userdata, message):
+    global diccionario
+    # Obtener el mensaje como cadena de texto
+    mensaje_recibido = str(message.payload.decode("utf-8"))
+    # Convertir el mensaje JSON en un diccionario
+    diccionario = json.loads(mensaje_recibido)
+    # Imprimir el diccionario recibido
+    if(message.topic == "Acciones_3"):
+        print("Mensaje recibido:", diccionario)
+
+# Configurar la función "on_message" como callback para el cliente MQTT
+client.on_message = on_message
+# Suscribirse al topic "datos_2"
+client.subscribe("Acciones_3")
+
+# Iniciar el bucle para manejar los eventos del cliente MQTT
+# Bucle para enviar mensajes
+while True:
+    client.loop_start() # start the loop
+    # Mensaje a enviar como diccionario
+    mensaje = {"Ultrasonico": 0.50,
+               "Infrarojo": 0.22     
+               }
+    # Convertir el diccionario en JSON
+    mensaje_json = json.dumps(mensaje)
+    # Publicar el mensaje en el topic "datos"
+    client.publish("Equipo_3/Sensores", mensaje_json)
+    time.sleep(1)
+    client.loop_stop()
+```
+
+# Equipo 4
+
+
+
+```
+import paho.mqtt.client as mqtt
+import json
+import time
+
+# Variables globales
+global diccionario
+
+# Configuración del cliente MQTT
+broker_address = "localhost"
+client = mqtt.Client("Equipo_4")
+client.connect(broker_address)
+
+# Función que se ejecuta cuando llega un mensaje
+def on_message(client, userdata, message):
+    global diccionario
+    # Obtener el mensaje como cadena de texto
+    mensaje_recibido = str(message.payload.decode("utf-8"))
+    # Convertir el mensaje JSON en un diccionario
+    diccionario = json.loads(mensaje_recibido)
+    # Imprimir el diccionario recibido
+    if(message.topic == "Acciones_4"):
+        print("Mensaje recibido:", diccionario)
+
+# Configurar la función "on_message" como callback para el cliente MQTT
+client.on_message = on_message
+# Suscribirse al topic "datos_2"
+client.subscribe("Acciones_4")
+
+# Iniciar el bucle para manejar los eventos del cliente MQTT
+# Bucle para enviar mensajes
+while True:
+    client.loop_start() # start the loop
+    # Mensaje a enviar como diccionario
+    mensaje = {"Ultrasonico": 10.50,
+               "Infrarojo": 0.22     
+               }
+    # Convertir el diccionario en JSON
+    mensaje_json = json.dumps(mensaje)
+    # Publicar el mensaje en el topic "datos"
+    client.publish("Equipo_4/Sensores", mensaje_json)
+    time.sleep(1)
+    client.loop_stop()
+```
+
+
 
