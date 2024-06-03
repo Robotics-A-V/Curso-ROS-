@@ -256,7 +256,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 ```
 
- MQTT-ROS
+# MQTT-ROS
 
 A continuación realizaremos la combinación del protocolo de comunicación MQTT con ROS.
 
@@ -264,10 +264,11 @@ El uso se basa en la creación de un nodo el cual se suscriba a los diferentes t
 
 Para realizar el ejemplo se implementarán 4 programas:
 
-1. equipo3.py - Este programa envia los datos de los sensores leídos utilizando el topic  "Equipo_3/Sensores" de MQTT.
-2. nodo_sensores.py - Este programa se conecta al topic mqtt "Equipo_3/Sensores" y cifra la información recibida transformandola en un Float32MultiArray para enviarla por el topic "Sensores_3" de ROS.
-3. nodo_mqtt-posiciones.py -Este programa se conecta con el topic "Sensores_3" y cifra esta información para transformala en un diccionario y enviarla utilizando MQTT a través del topic "Acciones_3"
+1. ***equipo3.py*** - Este programa envia los datos de los sensores leídos utilizando el topic  "Equipo_3/Sensores" de MQTT. Además, se suscribe al topico "Acciones_3" esperando la informacion de encedido o apagado.
+2. ***nodo_sensores.py*** - Este programa se conecta al topic mqtt "Equipo_3/Sensores" y cifra la información recibida transformandola en un Float32MultiArray para enviarla por el topic "Sensores_3" de ROS.
+3. ***nodo_mqtt-posiciones.py*** -Este programa se conecta con el topic "Sensores_3" y cifra esta información para transformala en un diccionario y enviarla utilizando MQTT a través del topic "Acciones_3"
 
+*** nodo_sensores.py**
 ```
 #!/usr/bin/env python3
 
@@ -337,9 +338,7 @@ if __name__=='__main__':
         pass
 ```
 
-#ROS-MQTT
-
-
+***nodo_mqtt_posiciones.py***
 
 ```
 #!/usr/bin/env python3
@@ -419,10 +418,7 @@ if __name__=='__main__':
         pass
 
 ```
-
-#MQTT
-
-
+***equipo3.py***
 ```
 import paho.mqtt.client as mqtt
 import json
@@ -468,9 +464,7 @@ while True:
     client.loop_stop()
 ```
 
-# Equipo 4
-
-
+***equipo4.py***
 
 ```
 import paho.mqtt.client as mqtt
