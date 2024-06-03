@@ -267,6 +267,7 @@ Para realizar el ejemplo se implementarán 4 programas:
 1. ***equipo3.py*** - Este programa envia los datos de los sensores leídos utilizando el topic  "Equipo_3/Sensores" de MQTT. Además, se suscribe al topico "Acciones_3" esperando la informacion de encedido o apagado.
 2. ***nodo_sensores.py*** - Este programa se conecta al topic mqtt "Equipo_3/Sensores" y cifra la información recibida transformandola en un Float32MultiArray para enviarla por el topic "Sensores_3" de ROS.
 3. ***nodo_mqtt-posiciones.py*** -Este programa se conecta con el topic "Sensores_3" y cifra esta información para transformala en un diccionario y enviarla utilizando MQTT a través del topic "Acciones_3"
+4. ***equipo4.py*** - Cumple la misma función que el "equipo3.py", y nos permite observar el trabajo de 2 equipos distintos al mismo tiempo. 
 
 ***nodo_sensores.py**
 ```
