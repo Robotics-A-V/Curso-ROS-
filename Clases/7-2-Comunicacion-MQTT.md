@@ -329,25 +329,6 @@ if __name__=='__main__':
         talker()
     except rospy.ROSInterruptException:
         pass
-
-
-"""
-    t7 = threading.Thread(name="hilo_7",target=Enviar_Datos,args=("Encendido", "Carrito3_Objetivo"))
-    t7.start()
-    t7.join()
-
-    
-    def Enviar_Datos(valor_1,topic):
-    global client
-    mensaje_mqtt={}
-    mensaje_mqtt["Angulo_q1"]=0.25
-    mensaje_mqtt["Anqulo_q2"]=0.25
-    mensaje_mqtt["Anqulo_q3"]=0.25
-    #Convertir el diccionario en JSON
-    mensaje_json = json.dumps(mensaje)
-    client.publish(topic, mensaje_json,0)
-
-"""
 ```
 
 
