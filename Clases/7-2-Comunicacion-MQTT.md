@@ -256,4 +256,98 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 ```
 
+ MQTT-ROS
+
+A continuación realizaremos la combinación del protocolo de comunicación MQTT con ROS.
+
+El uso se basa en la creación de un nodo el cual se suscriba a los diferentes topics creados en MQTT, este nodo además codificará los mensajes recibidos para ser utilizados dentro de los restos de nodos programados con ROS.
+
+```
+#!/usr/bin/env python3
+
+# Configuracion de librerias ROS
+import rospy
+from std_msgs.msg import Float32MultiArray
+
+# Librerias MQTT
+import paho.mqtt.client as mqtt
+import json
+
+# Variables para almacenar el estado de los dispositivos y tiempo de última recepción
+
+mensaje_ros = Float32MultiArray()
+global equipo_3,equipo_4
+equipo_3=[0.0,0.0]
+equipo_4=[0.0,0.0]
+
+# Función que se ejecuta al recibir un mensaje MQTT
+def on_message(client, userdata, message):
+    global equipo_3,equipo_4
+    topic = message.topic
+    payload = str(message.payload.decode("utf-8"))
+    sensores = json.loads(payload)
+    if(topic == "Equipo_3/Sensores"):
+        equipo_3=[sensores["Ultrasonico"],sensores["Infrarojo"]]
+        print("Mensaje MQTT desde el equipo 3")
+    if(topic == "Equipo_4/Sensores"):
+        equipo_4=[sensores["Ultrasonico"],sensores["Infrarojo"]]
+        print("Mensaje MQTT desde el equipo 4")
+
+def IniciarMQTT():
+    global client
+    # Configuración del cliente MQTT
+    broker_address = "localhost"
+    client = mqtt.Client("Central_Sensores")
+    client.connect(broker_address)
+    # Configurar la función "on_message" como callback para el cliente MQTT
+    client.on_message = on_message
+    # Suscribirse al topic "datos"
+    client.subscribe("+/Sensores",0)
+
+# Mantener el programa en ejecución
+def talker():
+    global equipo_3,equipo_4
+    # Iniciar nodo ROS
+    rospy.init_node('nodo_sensores', anonymous = True)
+    # Declaracion de frecuencia de ejecución
+    pub3 = rospy.Publisher('Sensores_3', Float32MultiArray, queue_size=1)
+    pub4 = rospy.Publisher('Sensores_4', Float32MultiArray, queue_size=1)
+    rate = rospy.Rate(10)
+    while not rospy.is_shutdown():
+        client.loop_start() # start the loop
+        # Mensajes de ROS
+        mensaje_ros.data = equipo_3
+        pub3.publish(mensaje_ros)
+        mensaje_ros.data = equipo_4
+        pub4.publish(mensaje_ros)
+        client.loop_stop()
+        rate.sleep()
+
+if __name__=='__main__':
+    try:
+        IniciarMQTT()
+        talker()
+    except rospy.ROSInterruptException:
+        pass
+
+
+"""
+    t7 = threading.Thread(name="hilo_7",target=Enviar_Datos,args=("Encendido", "Carrito3_Objetivo"))
+    t7.start()
+    t7.join()
+
+    
+    def Enviar_Datos(valor_1,topic):
+    global client
+    mensaje_mqtt={}
+    mensaje_mqtt["Angulo_q1"]=0.25
+    mensaje_mqtt["Anqulo_q2"]=0.25
+    mensaje_mqtt["Anqulo_q3"]=0.25
+    #Convertir el diccionario en JSON
+    mensaje_json = json.dumps(mensaje)
+    client.publish(topic, mensaje_json,0)
+
+"""
+```
+
 
