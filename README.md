@@ -150,6 +150,21 @@ El objetivo es definir las relaciones entre eslabones y generar un archivo URDF.
 
 [Ejemplo](./Clases/6-Archivos-URDF.md)
 # 7. Comunicación con dispositivos
+
+En ROS (Robot Operating System), se pueden utilizar varias tecnologías para la comunicación entre nodos y dispositivos externos, cada una con sus propias características y casos de uso.
+
+# Comunicación Serial
+La comunicación serial es una forma de comunicación de datos en la que los bits de datos se envían de uno en uno a lo largo de un solo canal. Es comúnmente utilizada para comunicarse con dispositivos embebidos, sensores y actuadores.
+
+# Integración con ROS
+Para integrar dispositivos seriales con ROS, se suele utilizar el paquete rosserial. Este paquete proporciona soporte para la comunicación entre ROS y microcontroladores que ejecutan firmware compatible con ROS.
+
+[Ejemplo](./Clases/7-1-Comunicacion-Serial.md)
+
+MQTT es un protocolo ligero de mensajería de publicación/suscripción que es ideal para dispositivos con recursos limitados y redes con ancho de banda reducido. Se utiliza ampliamente en aplicaciones de IoT.
+
+[Ejemplo](./Clases/7-2-Comunicación-MQTT.md)
+
 # 8. Rviz MoveiT
 Instalar las dependencias
    gazebo_ros_pkgs: <http://gazebosim.org/tutorials?tut=ros_installing> 
