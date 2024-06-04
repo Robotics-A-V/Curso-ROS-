@@ -155,7 +155,13 @@ Archivo ESP32.
 2. Colocar la ip del equipo, para saber la ip que tiene su equipo coloque en la terminal de ubuntu el comando
 
 
-
+# Instalacion de librerias 
+0. https://dl.espressif.com/dl/package_esp32_index.json (Preferencias, para el gestor de tarjetas)
+1. WiFi 1.2.7 de Arduino
+2. Pubsubclient 2.8.0 de Nick O leary
+3. EspMQTTClient (Opcional 1.13.3) // Esp32MQTTClient 0.2.0
+4. ArduinoJson de Benoit BLanchon 7.0.3 
+ 
 ```
 ifconfig
 ```
