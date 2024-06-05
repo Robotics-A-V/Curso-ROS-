@@ -13,7 +13,7 @@ Este repositorio contiene una serie de instrucciones para abordar la programacio
     * [4.1 Estructura de mensajes](#Mensajes)
     * [4.2 Mensajes Propios](#Mensajes-propios)
 * [5. Servicios y Acciones](#5-Servicios-y-Acciones)
-* [6. Robot 3 GDL](#6-Robot-3-GDL)
+* [6. Robot 3 GDL y RViz](#6-Robot-3-GDL-y-RViz)
 * [7. Comunicación con dispositivos](#7-Comunicación-con-dispositivos)
 * [8. Rviz MoveiT](#8-Rviz-MoveiT)
 * [9. Coppeliasim](#9-Coppeliasim)
