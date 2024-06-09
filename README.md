@@ -173,4 +173,16 @@ Instalar las dependencias
    moveit_core: <https://moveit.ros.org/install/>  
 # 9. Coppeliasim
 
-EL simulador Coppeliasim contiene una serie de 
+CoppeliaSim es un simulador de robots que permite diseñar, programar, y probar sistemas robóticos en un entorno virtual antes de implementarlos en hardware real. Soporta una variedad de robots, sensores, actuadores y entornos, y se destaca por su flexibilidad y la integración de varias herramientas para el desarrollo robótico.
+## Instalación
+1. Ingresamos a la página oficial de Coppeliasim [link](https://www.coppeliarobotics.com/), seleccionamos la opción Coppeliasim EDU, y descargamos la versión para Ubuntu 20.04.
+2. Descomprimimos la carpeta
+3. Ejecutamos el comando
+```
+sudo ./coppeliaSim.sh
+```
+
+Funcionamiento de Coppeliasim 
+
+Para el funcionamiento básico de un robot móvil, arrastramos el  objeto Pioneer P3Dx,
+
