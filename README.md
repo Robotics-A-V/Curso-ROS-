@@ -208,5 +208,32 @@ source ~/.bashrc
 ```
 echo 'export CMAKE_PREFIX_PATH=/ruta/carpetasimulador' >> ~/.bashrc
 source ~/.bashrc
-
 ```
+finalmente, compilamos el archivo utilizando el comando 
+```
+catkin_make --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+5. Una vez compilado el programa copiamos el archivo **libsimROS.so** que se encuentra en la ubicacion curso_2024/devel/lib/ y lo copiamos en la carpeta que contiene el simulador, de ser necesario se remplaza por el actual.
+
+6. Ejecuto el simulador
+```
+sudo ./coppeliaSim.sh
+```
+7. Repito el paso uno y de existir un error debido a no encontrarse la dependencia **libmessage_filters.so** es necesario agregar en el archivo bashrc.sh la siguiente instrucción
+```
+export LD_LIBRARY_PATH=/opt/ros/"version_ros"/lib:$LD_LIBRARY_PATH
+```
+ 8. Repetimos nuevamente el paso 6 y 1, de existir un error con respecto a las bibliotecas compartidas, es necesario realizar los siguientes pasos adicionales:
+
+ 9. Dentro de la carpeta del simulador crear un archivo con el nombre ***start_coppelia.sh*** y agregar el sigueinte código 
+```
+#!/bin/bash
+export LD_LIBRARY_PATH=/opt/ros/noetic/lib:$LD_LIBRARY_PATH
+/home/andy/cursos_ros/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04/coppeliaSim.sh
+```
+10. Agregar permisos de ejecución 
+chmod +x start_coppelia.sh
+
+11. Ejecutar 
+./start_coppelia.sh 
