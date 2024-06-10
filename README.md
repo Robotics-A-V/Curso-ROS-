@@ -182,11 +182,11 @@ CoppeliaSim es un simulador de robots que permite diseñar, programar, y probar 
 sudo ./coppeliaSim.sh
 ```
 
-Simulación 
+## 9.1. Simulación 
 
 Para abordar los elementos básicos de la simulación se recomienda utilizar el siguiente tutorial [IK en CoppeliaSim (Tutorial)](https://www.youtube.com/watch?v=dB8ebrjUPdQ)
 
-9.1 ROS and Coppeliasim
+## 9.2. ROS and Coppeliasim
 
 El simulador de Coppeliasim es compatible con la arquitectura de ROS a través de la interfaz de ROS ( libsimROS.so ), su estructura se basa en el uso de tópicos y nodos que permitan cominicarse con el entorno virtual de Coppealiasim y manipular las acciones del robot.
 
