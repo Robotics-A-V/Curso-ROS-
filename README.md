@@ -233,7 +233,10 @@ export LD_LIBRARY_PATH=/opt/ros/noetic/lib:$LD_LIBRARY_PATH
 /home/andy/cursos_ros/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04/coppeliaSim.sh
 ```
 10. Agregar permisos de ejecución 
+```
 chmod +x start_coppelia.sh
-
-11. Ejecutar 
+```
+11. Ejecutar
+```
 ./start_coppelia.sh 
+```
