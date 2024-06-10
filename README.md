@@ -182,7 +182,31 @@ CoppeliaSim es un simulador de robots que permite diseñar, programar, y probar 
 sudo ./coppeliaSim.sh
 ```
 
-Funcionamiento de Coppeliasim 
+Simulación 
 
-Para el funcionamiento básico de un robot móvil, arrastramos el  objeto Pioneer P3Dx,
+Para abordar los elementos básicos de la simulación se recomienda utilizar el siguiente tutorial [IK en CoppeliaSim (Tutorial)](https://www.youtube.com/watch?v=dB8ebrjUPdQ)
 
+9.1 ROS and Coppeliasim
+
+El simulador de Coppeliasim es compatible con la arquitectura de ROS a través de la interfaz de ROS ( libsimROS.so ), su estructura se basa en el uso de tópicos y nodos que permitan cominicarse con el entorno virtual de Coppealiasim y manipular las acciones del robot.
+
+Para emparejar ROS con Coppealiasim se deben seguir los siguientes pasos:
+1. Dentro de la terminal de Coppealiasim ejecutamos el comando:
+```
+simROS = require('simROS')
+```
+este comando nos permite verificar si las dependencias necesarias para su uso están correctamente instaladas, de existir errores es necesario realizar los sigueintes pasos:
+
+2. Dentro del espacio de trabajo para este caso curso_2024_ws/src copiamos los paquetes  "sim_ros_interface" y "ros_bubble_rob"  que se encuentra en la direccion: (carpetasimulador)/programming/ros_packages
+   
+4. Abrimos una terminal desde el workspace y colocamos los siguientes comandos:
+```
+echo 'export COPPELIASIM_ROOT_DIR=/ruta/carpetasimulador' >> ~/.bashrc
+source ~/.bashrc
+```
+
+```
+echo 'export CMAKE_PREFIX_PATH=/ruta/carpetasimulador' >> ~/.bashrc
+source ~/.bashrc
+
+```
