@@ -399,7 +399,7 @@ if __name__ == '__main__':
 
 `sudo apt-get install ros-noetic-moveit ros-noetic-moveit-plugins ros-noetic-moveit-planners`
 
-descargamos el repositorio
+[descargamos el repositorio](https://drive.google.com/file/d/1nag3ZvjuwXI_EonoD5uC5Z3tQNcq1AZo/view?usp=drive_link)
 
 https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf
 
