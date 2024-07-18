@@ -2,7 +2,7 @@
 
 A continuación vamos a revisar el funcionamiento del robot perteneciente a Fetch Robotics https://docs.fetchrobotics.com/
 
-1. Descargar el archivo Fetch.zip
+1. Descargar el archivo Fetch.zip [Fetch.zip ](https://drive.google.com/file/d/1BIxx2r0pQhecf6fCdnr5PlkOMnW-xIVL/view?usp=drive_link)
 2. Copiarlo al src del work space
 3. Abrir la terminal
 
@@ -22,7 +22,11 @@ Revisamos todos los topicos que incluyen para el control del robot
 
 ```
 rostopic list
+```
+```
 rostopic info /base_controller/command
+```
+```
 rosmsg info geometry_msgs/Twist
 ```
 
