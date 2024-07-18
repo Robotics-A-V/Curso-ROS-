@@ -395,7 +395,9 @@ if __name__ == '__main__':
             pass
 ```
 ## MoveIt
-# Instalacion de paquetes
+
+[Página Oficial](https://moveit.github.io/moveit_tutorials/)
+# Instalacion de paquetes 
 
 `sudo apt-get install ros-noetic-moveit ros-noetic-moveit-plugins ros-noetic-moveit-planners`
 
