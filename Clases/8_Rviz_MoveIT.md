@@ -394,5 +394,28 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException :       # Check si hay una excepción  Ctrl-C para terminar la ejecución del nodo
             pass
 ```
+## MoveIt
+# Instalacion de paquetes
 
+`sudo apt-get install ros-noetic-moveit ros-noetic-moveit-plugins ros-noetic-moveit-planners`
+
+descargamos el repositorio
+
+https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf
+
+Controladores para la manipulación
+```
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+```
+lanzamos la herramienta de moveIT
+```
+roslaunch moveit_setup_assistant setup_assistant.launch
+```
+
+Elegimos el archivo urdf
+
+Realizamos las consiguraciones
+```
+roslaunch "nombre del paquete" demo.launch
+```
 
