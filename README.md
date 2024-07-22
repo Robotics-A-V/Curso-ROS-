@@ -254,6 +254,18 @@ export LD_LIBRARY_PATH=/opt/ros/noetic/lib:$LD_LIBRARY_PATH
 chmod +x start_coppelia.sh
 ```
 11. Ejecutar
+
+```
+roscore
+```
+    
 ```
 ./start_coppelia.sh 
 ```
+
+## 9.3. Simulaciones de ejemplo 
+
+Abrimos la escena controlTypeExamples/controlledViaRos.ttt 
+
+
+
