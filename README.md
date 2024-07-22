@@ -265,7 +265,7 @@ roscore
 
 ## 9.3. Simulaciones de ejemplo 
 
-Abrimos la escena controlTypeExamples/controlledViaRos.ttt 
+Para revisar el funcionamiento de Coppeliasim en conjunto con ROS utilizaremos las siguientes escenas:
 
 
 
