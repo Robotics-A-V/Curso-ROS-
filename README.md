@@ -200,17 +200,32 @@ simROS = require('simROS')
 este comando nos permite verificar si las dependencias necesarias para su uso están correctamente instaladas, de existir errores es necesario realizar los sigueintes pasos:
 
 2. Dentro del espacio de trabajo para este caso curso_2024_ws/src copiamos los paquetes  "sim_ros_interface" y "ros_bubble_rob"  que se encuentra en la direccion: (carpetasimulador)/programming/ros_packages
+3. En este caso, el simulador de coppeliasim se encuentra dentro del ws de ROS por lo cual al realizar el paso 2 es necesario eleminar las carpetas de ROS_Packages y ROS2_packages, para no crear conflictos por paquetes con el mismo nombre.
    
 4. Abrimos una terminal desde el workspace y colocamos los siguientes comandos:
+   
 ```
 echo 'export COPPELIASIM_ROOT_DIR=/ruta/carpetasimulador' >> ~/.bashrc
 source ~/.bashrc
 ```
+y 
 
 ```
-echo 'export CMAKE_PREFIX_PATH=/ruta/carpetasimulador' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=/ruta/carpetasimulador:$CMAKE_PREFIX_PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
+por ejemplo: 
+
+```
+echo 'export CMAKE_PREFIX_PATH=/home/andy/cursos_ros/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+```
+echo 'export COPPELIASIM_ROOT_DIR=/home/andy/cursos_ros/curso_2024_ws/src/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04' >> ~/.bashrc
+source ~/.bashrc
+```
+
 finalmente, compilamos el archivo utilizando el comando 
 ```
 catkin_make --cmake-args -DCMAKE_BUILD_TYPE=Release
