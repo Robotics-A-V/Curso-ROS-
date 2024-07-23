@@ -217,7 +217,7 @@ source ~/.bashrc
 por ejemplo: 
 
 ```
-echo 'export CMAKE_PREFIX_PATH=/home/andy/cursos_ros/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+echo 'export CMAKE_PREFIX_PATH=/home/andy/cursos_ros/curso_2024_ws/src/CoppeliaSim_Edu_V4_6_0_rev18_Ubuntu20_04:$CMAKE_PREFIX_PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
