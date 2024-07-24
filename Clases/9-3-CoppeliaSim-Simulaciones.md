@@ -7,6 +7,7 @@ Se plantea el uso de 2 metodos de resolución para la cinemática inversa:
 2. Método de minimos cuadrados.
 
 La escena generada os permitirá mover la posición y orientación del efector del robot elegido, en este caso el efector es un gripper.
+[Escena](./Clases/ScenaTutorial.ttt)
 
 # Cinemática Inversa y ejecicio de PICK and PLACE 
 
@@ -25,8 +26,18 @@ En la escena se impementa la siguiente rutina:
 
 # Comunicación ROS y teleop_twist_keyboard
 
-A continuación, esta escena implementa el uso de la comunicación entre ROS y Coppeliasim. El objetivo de la misma es manejar el roboto presentado en la simulación a través del paquete teleop_twist_keyboard.
+A continuación, esta escena implementa el uso de la comunicación entre ROS y Coppeliasim. El objetivo de la misma es manejar el robot presentado en la simulación a través del paquete teleop_twist_keyboard.
 
 Para ejecutar la escena es necesario arrancar el nodo master de ROS a través del comando:
 
-ROSCORE
+```
+roscore
+```
+
+en una terminal adicional, colocamos el siguiente comando 
+
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
+Ejecutamos la escena y podremos controlar el robot móvil usando las teclas de nuestro teclado, el código necesario para implementar la comunicación entre ROS y CoppeliaSin se encuentra detallado en el scritp del robot móvil.
