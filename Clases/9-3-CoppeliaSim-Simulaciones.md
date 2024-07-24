@@ -24,7 +24,7 @@ En la escena se impementa la siguiente rutina:
 
 4. El robot repite los puntos 1,2 y 3, y va colocando los cubos uno encima de otro.
 
-
+[Escena](./ScenaTutorial_2.ttt)
 # Comunicación ROS y teleop_twist_keyboard
 
 A continuación, esta escena implementa el uso de la comunicación entre ROS y Coppeliasim. El objetivo de la misma es manejar el robot presentado en la simulación a través del paquete teleop_twist_keyboard.
