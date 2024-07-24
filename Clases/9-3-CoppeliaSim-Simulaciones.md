@@ -7,7 +7,8 @@ Se plantea el uso de 2 metodos de resolución para la cinemática inversa:
 2. Método de minimos cuadrados.
 
 La escena generada os permitirá mover la posición y orientación del efector del robot elegido, en este caso el efector es un gripper.
-[Escena](./Clases/ScenaTutorial.ttt)
+
+[Escena](./ScenaTutorial.ttt)
 
 # Cinemática Inversa y ejecicio de PICK and PLACE 
 
