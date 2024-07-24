@@ -27,6 +27,7 @@ En la escena se impementa la siguiente rutina:
 [Escena](./ScenaTutorial_2.ttt)
 # Comunicación ROS y teleop_twist_keyboard
 
+(Para ejectuar la escena es necesario arrancar el programa mediante el comando ./start_coppelia.sh )
 A continuación, esta escena implementa el uso de la comunicación entre ROS y Coppeliasim. El objetivo de la misma es manejar el robot presentado en la simulación a través del paquete teleop_twist_keyboard.
 
 Para ejecutar la escena es necesario arrancar el nodo master de ROS a través del comando:
@@ -42,3 +43,4 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
 Ejecutamos la escena y podremos controlar el robot móvil usando las teclas de nuestro teclado, el código necesario para implementar la comunicación entre ROS y CoppeliaSin se encuentra detallado en el scritp del robot móvil.
+[Escena](./controlwheelV3.ttt)
