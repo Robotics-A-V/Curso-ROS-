@@ -263,9 +263,8 @@ roscore
 ./start_coppelia.sh 
 ```
 
-## 9.3. Simulaciones de ejemplo 
-
+## 9.3. Simulaciones de ejemplos
 Para revisar el funcionamiento de Coppeliasim en conjunto con ROS utilizaremos las siguientes escenas:
 
-
+[Ejemplos](./Clases/9-3-CoppeliaSim-Simulaciones.md) 
 
