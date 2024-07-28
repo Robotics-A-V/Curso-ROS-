@@ -60,3 +60,4 @@ Por la parte de publicación se envían los datos obtenidos por el sensor de pro
 --"/"..sensorTopicName --
 -- '/'..simulationTimeTopicName -- , respectivamente.
 
+[Escena](./controlwheelV3.ttt)
