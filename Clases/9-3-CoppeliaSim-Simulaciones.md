@@ -44,3 +44,19 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 Ejecutamos la escena y podremos controlar el robot móvil usando las teclas de nuestro teclado, el código necesario para implementar la comunicación entre ROS y CoppeliaSin se encuentra detallado en el scritp del robot móvil.
 [Escena](./controlwheelV3.ttt)
+
+
+# ControlledViaROS 
+ 
+Esta escena es proporsioda por CoppealiaSim y contiene los bloques de programación necesarias para realizar la publicación y suscripción de tópicos a través de ROS.
+
+Por la parte de suscripción se recibe la información del movimiento que debe tener el robot diferencial, a través del seteo de las velocidades en la llanta izquierda y derecha usando los tópicos: 
+
+--'/'..leftMotorTopicName--  (aquí se realiza la unión de 2 cadenas de string a través del comando ".."). y el tópico: 
+
+--'/'..rightMotorTopicName-- respectivamente.
+
+Por la parte de publicación se envían los datos obtenidos por el sensor de proximidad y el valor del tiempo de simulación a través de los tópicos: 
+--"/"..sensorTopicName --
+-- '/'..simulationTimeTopicName -- , respectivamente.
+
