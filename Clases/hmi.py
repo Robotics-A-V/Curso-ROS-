@@ -27,7 +27,9 @@ class MiNodoROS(QMainWindow):
             rospy.loginfo("Por favor, introduce números separados por espacios.")
         
     def callback(self, data):
-        # mofidicar en base al nombre del QLineEdit y el valor del flotante
+        # mofidicar en base al nombre del QLineEdit donde se desee mostrar el dato
+        # tener en cuenta la posición del flotante en el arreglo 
+        dato = data.data[0] + 1
         rospy.loginfo(rospy.get_caller_id() + " Mensaje recibido: %s", data.data)
         self.lineEdit.setText(str(data.data[0]))
 
