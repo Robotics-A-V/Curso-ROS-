@@ -205,9 +205,9 @@ void loop(){
   node_handle.spinOnce();
   delay(100);
 }
-
+```
 * El codigo anterior se suscribe a un topico llamado *intensidad_led* en el cual se enviara un valor entero de 0 a 255 para controlar la intensidad de un led, dicho valor puede ser enviado con la ayuda de un archivo ".py" el cual tenga un nodo publicador con la siguiente estructura:
-
+```
 #!/usr/bin/env python3
 
 import rospy
