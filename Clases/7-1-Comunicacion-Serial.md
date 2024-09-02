@@ -37,6 +37,12 @@ sudo usermod -a -G dialout [Nombre_de_usuario]
 ```
 rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
+
+Nota: para una esp32 deberán usar el siguiente comando:
+```
+rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0 _baud:=57600
+```
+
 # Nodo publicador en Arduino
 * Ejecutado el nodo de rosserial, se puede tener acceso a los topicos declarados en la tarjeta Arduino, la estructura basica de un programa en Arduino IDE para la lectura y publicacion de dos se;ales analogicas es el siguiente:
 
