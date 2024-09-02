@@ -2,6 +2,8 @@
 
 Primero debemos realizar la instalación de audiono ID. [Tutorial](https://www.youtube.com/watch?reload=9&v=VWycQGTYAwU)
 
+[arduino 1.18 ](https://www.youtube.com/watch?v=cNw9buPnKz4)
+
 * Descargar el software de Arduino del sitio oficial, la descarga debe realizarse de acuerdo a la infraestructura del sistema operativo con el que se esta trabajando: [Link de descarga oficial de arduino para distribuciones Linux](https://docs.arduino.cc/software/ide-v1/tutorials/Linux)
 * Se descomprimira el archivo que se acaba de descargar
 * Se abrirá una nueva terminal, se cambiará el directorio para encontrarse en la carpeta de descargas y se ejecutará el siguiente comando para ejecutar el archivo de instalación:
