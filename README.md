@@ -40,7 +40,7 @@ python3 --version
 
 Enlace Oficial ROS Noetic: [link](https://wiki.ros.org/noetic/Installation/Ubuntu)
 
-Instalación de ROS Noetic en Ubuntu 20.04 
+Instalación de ROS Noetic en Ubuntu 22.04.4 
 
 A continuación, ejecutar todos los comandos en el terminal:
 
