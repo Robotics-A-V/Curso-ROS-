@@ -157,6 +157,7 @@ La comunicación serial es una forma de comunicación de datos en la que los bit
 ## Integración con ROS
 Para integrar dispositivos seriales con ROS, se suele utilizar el paquete rosserial. Este paquete proporciona soporte para la comunicación entre ROS y microcontroladores que ejecutan firmware compatible con ROS.
 
+Configuración serila [Tutorial](https://www.youtube.com/watch?v=GfGkbx-ADCs)
 [Ejemplo](./Clases/7-1-Comunicacion-Serial.md)
 
 # MQTT (Message Queuing Telemetry Transport)
